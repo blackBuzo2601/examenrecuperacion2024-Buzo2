@@ -9,7 +9,8 @@ const carroY = 0;
 const numeroIntroducidoString = numeroIntroducido.toString();
 let contador = -1;
 let valorUno = 0;
-let valorDos = 0;
+let valorDos = "";
+let sumaPrimerPar = 0;
 //const numeroIntroducidoString = numeroIntroducido.toString();
 if (numeroIntroducido < 0) {
   console.log("No introduzcas numeros negativos");
@@ -18,13 +19,13 @@ if (numeroIntroducido < 0) {
 
   for (let i = 0; i < numeroIntroducidoString.length; i++) {
     contador++;
-    console.log("contador vale: " + contador);
-    valorUno = valorUno.toString();
-    valorUno = numeroIntroducidoString[contador];
 
-    console.log("valor uno: " + valorUno);
+    valorUno = numeroIntroducido[contador]; //tomaar el primer numero
     contador++;
-    console.log("contador vale: " + contador);
-    valorDos = numeroIntroducidoString[contador];
+
+    valorDos = numeroIntroducido[contador];
+
+    console.log("imprimiendo valor uno: " + valorUno);
+    console.log("imprimiendo valor dos: " + valorDos);
   }
 }
