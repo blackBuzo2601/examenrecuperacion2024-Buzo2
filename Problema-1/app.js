@@ -17,11 +17,12 @@ if (numeroIntroducido < 0) {
 } else {
   console.log("Numero entero positivo detectado. Proceder");
 
+  console.log("imprimiendo un solo digito: " + numeroIntroducido[3]);
   for (let i = 0; i < numeroIntroducidoString.length; i++) {
-    contador++;
+    contador++; //0
 
     valorUno = numeroIntroducido[contador]; //tomaar el primer numero
-    contador++;
+    contador++; //1
 
     valorDos = numeroIntroducido[contador];
 
