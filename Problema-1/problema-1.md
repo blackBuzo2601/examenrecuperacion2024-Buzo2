@@ -7,6 +7,9 @@ Desarrollar un programa que simule una carrera entre dos dígitos adyacentes de 
 ### **Instrucciones para correr el script**
 
 - NOTA: Esta solución fue realizada usando el entorno de ejecución de Node.js v20.18.0.
+- Como no pude encontrar a tiempo la instrucción que permite leer del teclado lo que
+  introduzca el usuario, creé una variable denominada "numeroIntroducido". Aquí el usuario
+  puede ingresar cualquier numero que sea mayor a 0 (como el ejemplo que viene ahi.)
 - Abrir una nueva terminal y asegurarse de estar en la ruta correspondiente: \Backend1ExamenRecuperacionBuzo\Problema1
 - Si se encuentra dentro de \Backend1ExamenRecuperacionBuzo cambie de dirección con el comando: cd Problema1
 - Estando en la ruta indicada, escribir: node app.js.

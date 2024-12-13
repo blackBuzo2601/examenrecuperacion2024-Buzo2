@@ -28,10 +28,15 @@ if (numeroIntroducido < 0) {
       contador++; //1
       valorDos = numeroIntroducidoString[contador];
       let sumaPrimerPar = new String(valorUno + "+" + valorDos);
-      console.log(eval(sumaPrimerPar.valueOf())); //con valueOf podemos convertir un objeto string a su
+      console.log(
+        "imprimiendo suma del primer par: primera iteración: " +
+          eval(sumaPrimerPar.valueOf())
+      );
+      //con valueOf podemos convertir un objeto string a su
       //contraparte definitiva. es lo que queremos, queremos convertir un string a numero
       //(debido a que no existe algo como to.Number() al igual que toString())
     } else {
+      //este condicional se cumple cuando ya se incrementó dos veces contador
       segundoValorUno = numeroIntroducidoString[contador];
       segundoValorDos = numeroIntroducidoString[contador];
       let sumaSegundoPar = new String(segundoValorUno + "+" + segundoValorDos);
