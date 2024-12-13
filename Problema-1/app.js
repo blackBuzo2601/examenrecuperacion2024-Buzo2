@@ -23,13 +23,16 @@ if (numeroIntroducido < 0) {
   for (let i = 0; i < numeroIntroducidoString.length; i++) {
     //ITERAR POR LA CANTIDAD DE DIGITOS
     contador++; //0
-    console.log("valor contador inicio del bucle:" + contador);
     if (contador > 1) {
       //este condicional se cumple cuando ya se incrementó dos veces contador
       segundoValorUno = numeroIntroducidoString[contador];
+      contador++;
       segundoValorDos = numeroIntroducidoString[contador];
       let sumaSegundoPar = new String(segundoValorUno + "+" + segundoValorDos);
-      console.log("Imprimiendo suma del segundo par: " + sumaSegundoPar);
+      console.log(
+        "imprimiendo suma del segundo par:" + eval(sumaSegundoPar.valueOf())
+      );
+
       //cuando contador vale 1, es porque ya se iteró dos veces
     } else {
       valorUno = numeroIntroducidoString[contador]; //tomaar el primer numero
@@ -37,8 +40,7 @@ if (numeroIntroducido < 0) {
       valorDos = numeroIntroducidoString[contador];
       let sumaPrimerPar = new String(valorUno + "+" + valorDos);
       console.log(
-        "imprimiendo suma del primer par: primera iteración: " +
-          eval(sumaPrimerPar.valueOf())
+        "imprimiendo suma del primer par:" + eval(sumaPrimerPar.valueOf())
       );
       //con valueOf podemos convertir un objeto string a su
       //contraparte definitiva. es lo que queremos, queremos convertir un string a numero
