@@ -9,24 +9,25 @@ const carroY = 0;
 const numeroIntroducidoString = numeroIntroducido.toString();
 let contador = -1;
 let valorUno = 0;
-let valorDos = "";
+let valorDos = 0;
 let sumaPrimerPar = 0;
-//const numeroIntroducidoString = numeroIntroducido.toString();
+let numeroUno = 0;
 if (numeroIntroducido < 0) {
   console.log("No introduzcas numeros negativos");
 } else {
   console.log("Numero entero positivo detectado. Proceder");
-
-  console.log("imprimiendo un solo digito: " + numeroIntroducido[3]);
   for (let i = 0; i < numeroIntroducidoString.length; i++) {
+    //iterar por la cantidad de digitos
     contador++; //0
 
-    valorUno = numeroIntroducido[contador]; //tomaar el primer numero
+    valorUno = numeroIntroducidoString[contador]; //tomaar el primer numero
     contador++; //1
 
-    valorDos = numeroIntroducido[contador];
+    valorDos = numeroIntroducidoString[contador];
 
-    console.log("imprimiendo valor uno: " + valorUno);
-    console.log("imprimiendo valor dos: " + valorDos);
+    let suma = new String(valorUno + "+" + valorDos);
+    console.log(eval(suma.valueOf())); //con valueOf podemos convertir un objeto string a su
+    //contraparte definitiva. es lo que queremos, queremos convertir un string a numero
+    //(debido a que no existe algo como to.Number() al igual que toString())
   }
 }
