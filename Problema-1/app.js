@@ -13,7 +13,7 @@ let valorUno = 0;
 let valorDos = 0;
 let segundoValorUno = 0;
 let segundoValorDos = 0;
-
+let bandera = false;
 let sumaSegundoPar = 0;
 let numeroUno = 0;
 if (numeroIntroducido < 0) {
@@ -23,7 +23,7 @@ if (numeroIntroducido < 0) {
   for (let i = 0; i < numeroIntroducidoString.length; i++) {
     //ITERAR POR LA CANTIDAD DE DIGITOS
     contador++; //0
-    if (contador > 1) {
+    if (contador > 1 && bandera !== true) {
       //este condicional se cumple cuando ya se incrementó dos veces contador
       segundoValorUno = numeroIntroducidoString[contador];
       contador++;
@@ -32,19 +32,30 @@ if (numeroIntroducido < 0) {
       console.log(
         "imprimiendo suma del segundo par:" + eval(sumaSegundoPar.valueOf())
       );
+      bandera = true;
 
       //cuando contador vale 1, es porque ya se iteró dos veces
     } else {
-      valorUno = numeroIntroducidoString[contador]; //tomaar el primer numero
-      contador++; //aqui contador vale 1
-      valorDos = numeroIntroducidoString[contador];
-      let sumaPrimerPar = new String(valorUno + "+" + valorDos);
-      console.log(
-        "imprimiendo suma del primer par:" + eval(sumaPrimerPar.valueOf())
-      );
-      //con valueOf podemos convertir un objeto string a su
-      //contraparte definitiva. es lo que queremos, queremos convertir un string a numero
-      //(debido a que no existe algo como to.Number() al igual que toString())
-    }
+      if (bandera == true) {
+        //esta bandera es para hacer la competencia. si se activa,
+        //hacemos  competir los numeros
+        if (sumaPrimerPar > sumaSegundoPar) {
+          console.log("Mayor es: " + sumaPrimerPar);
+        } else {
+          console.log("Mayor es: " + sumaSegundoPar);
+        }
+      } else {
+        valorUno = numeroIntroducidoString[contador]; //tomaar el primer numero
+        contador++; //aqui contador vale 1
+        valorDos = numeroIntroducidoString[contador];
+        let sumaPrimerPar = new String(valorUno + "+" + valorDos);
+        console.log(
+          "imprimiendo suma del primer par:" + eval(sumaPrimerPar.valueOf())
+        );
+        //con valueOf podemos convertir un objeto string a su
+        //contraparte definitiva. es lo que queremos, queremos convertir un string a numero
+        //(debido a que no existe algo como to.Number() al igual que toString())
+      } //sub condicional
+    } //condicional principal
   }
 }
